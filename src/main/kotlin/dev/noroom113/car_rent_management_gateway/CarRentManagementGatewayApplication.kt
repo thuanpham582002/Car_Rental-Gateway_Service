@@ -11,6 +11,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy
 class CarRentManagementGatewayApplication{
 
 }
+// this is test commit message
 
 fun main(args: Array<String>) {
     runApplication<CarRentManagementGatewayApplication>(*args)
