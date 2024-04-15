@@ -1,1 +1,1 @@
-rootProject.name = "Car_Rent_Management_Gateway"
+rootProject.name = "gateway-service"
