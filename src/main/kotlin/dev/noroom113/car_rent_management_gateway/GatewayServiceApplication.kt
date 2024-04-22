@@ -1,6 +1,7 @@
 package dev.noroom113.car_rent_management_gateway
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
 import org.springframework.boot.runApplication
 import org.springframework.cloud.openfeign.EnableFeignClients
 import org.springframework.scheduling.annotation.EnableScheduling
