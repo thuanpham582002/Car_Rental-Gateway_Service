@@ -4,12 +4,13 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder
 import org.springframework.cloud.gateway.route.builder.routes
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.web.reactive.function.client.WebClient
 
 @Configuration
 class RoutesConfig {
 
     @Bean
-    fun routeLocator(builder: RouteLocatorBuilder) = builder.routes {
+    fun routeLocator(builder: RouteLocatorBuilder, webClientBuilder: WebClient.Builder) = builder.routes {
         route("user_service") {
             path("/api/v1/user/**")
             uri("lb://user-service")
@@ -27,6 +28,7 @@ class RoutesConfig {
             uri("lb://contract-service")
         }
         route("auth_service") {
+            webClientBuilder.build()
             path("/api/v1/auth/**")
             uri("lb://auth-service")
         }
